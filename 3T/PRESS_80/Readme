@@ -1,0 +1,26 @@
+These basis set contains the following components:
+
+Alanine, Aspartate, Choline (Cho), Glycerophosphochoine (GPC), Phosphocholine (PC), Creatine (Cr), Phosphocreatine (PCr), GABA, Glutamate (Glu), Glutamine (Gln), Lactate, Myo-Inisitol, N-acetylaspartate (NAA), n-acetylaspartylglutamate (NAAG), Scyllo-Inositol, Glutathione (GSH), Glucose, Taurine, beta-hydroxybutyrate, Cit, Eth, Glycine, PE. 
+
+Additionally, Siemens_7T_steam8_MM also includes nine macromolecules (M0.95, M1.24, M1.43, M1.71, M2.07, M2.30, M3.03, M3.24, M3.98) simulated as detailed in Bell et al. (2024) under review (details and spin systems can be found in https://github.com/HarrisBrainLab/MMSim).
+
+The components of these basis set were simulated using the FID-A script run_simPressShaped_fast with the parameters detailed below. 
+
+% ************INPUT PARAMETERS**********************************
+refocWaveform='sampleRefocPulse.pta'; %name of refocusing pulse waveform.
+refTp=5.2; %duration of refocusing pulses[ms]
+Npts=4140; %number of spectral points
+sw=4000; %spectral width [Hz]
+Bfield=2.89; %magnetic field strength [Tesla]
+lw=2; %linewidth of the output spectrum [Hz]
+thkX=2.5; %slice thickness of x refocusing pulse [cm]
+thkY=2.5; %slice thickness of y refocusing pulse [cm]
+fovX=3.0; %size of the full simulation Field of View in the x-direction [cm]
+fovY=3.0; %size of the full simulation Field of View in the y-direction [cm]
+nX=32; %Number of grid points to simulate in the x-direction
+nY=32; %Number of grid points to simulate in the y-direction
+tau1=10.5; %TE1 for first spin echo [ms]
+tau2=69.5; %TE2 for second spin echo [ms]
+refPhCyc1=[0,90]; %phase cycling steps for 1st refocusing pulse [degrees]
+refPhCyc2=[0,90]; %phase cycling steps for 2nd refocusing pulse [degrees]
+% ************END OF INPUT PARAMETERS**********************************
